@@ -4,7 +4,7 @@ function subtract(key, value) {
   setTimeout(() => {
     data[key] = data[key] - value;
     if (data[key] === 0) delete data[key];
-  }, process.env.EXPIRE_TIME);
+  }, process.env.EXPIRE_TIME || 360000);
 }
 
 // return 0 if key is not found in data object
